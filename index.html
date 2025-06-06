@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaçan Buton</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #kacanButon {
+      position: absolute;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="kacanButon">Bana Tıkla 😈</button>
+
+  <script>
+    const buton = document.getElementById("kacanButon");
+
+    buton.addEventListener("mouseenter", () => {
+      const maxX = window.innerWidth - buton.offsetWidth;
+      const maxY = window.innerHeight - buton.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      buton.style.left = randomX + "px";
+      buton.style.top = randomY + "px";
+    });
+  </script>
+
+</body>
+</html>
