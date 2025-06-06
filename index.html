@@ -40,10 +40,26 @@
       buton.style.top = randomY + "px";
     });
   </script>
+<body>
 
+  <div id="arkaplanYazi">mal uğur</div>
+  <button id="kacanButon">Bana Tıkla 😈</button>
+
+  <script>
+    const buton = document.getElementById("kacanButon");
+
+    buton.addEventListener("mouseenter", () => {
+      const maxX = window.innerWidth - buton.offsetWidth;
+      const maxY = window.innerHeight - buton.offsetHeight;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      buton.style.left = randomX + "px";
+      buton.style.top = randomY + "px";
+    });
+  </script>
 </body>
-</html>
-#arkaplanYazi {
+<style> #arkaplanYazi {
   position: absolute;
   font-size: 120px;
   color: rgba(0, 0, 0, 0.05);
@@ -55,3 +71,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
